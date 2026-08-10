@@ -4,23 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Affinity Mark Enterprise — Prints That Make an Impact</title>
-<link rel="icon" type="image/icon.png" href="pic/icon.png">
+<link rel="icon" type="image/png" href="pic/icon.png">
+<link rel="apple-touch-icon" href="pic/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1C1810;
-  --plum:#17140F;
-  --plum-soft:#242018;
-  --magenta:#C6A15B;
-  --magenta-deep:#96762E;
-  --green:#3F5A45;
-  --paper:#FFFFFF;
-  --paper-dim:#F8F3E7;
-  --ink-soft:#6B6152;
-  --gold:#C6A15B;
-  --gold-deep:#96762E;
-  --gold-pale:#E9D9B4;
+  --ink:#1B0F20;
+  --plum:#2B1531;
+  --plum-soft:#3B1F44;
+  --magenta:#E8189C;
+  --magenta-deep:#B90F7C;
+  --green:#6FBE44;
+  --paper:#FBF7F4;
+  --paper-dim:#F1E7EC;
+  --ink-soft:#5B4A61;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
@@ -32,10 +30,9 @@ body{
   overflow-x:hidden;
 }
 h1,h2,h3,.display{
-  font-family:'Playfair Display', serif;
-  font-weight:600;
-  letter-spacing:0.005em;
-  line-height:1.02;
+  font-family:'Bebas Neue', sans-serif;
+  letter-spacing:0.02em;
+  line-height:0.95;
 }
 .eyebrow{
   font-family:'IBM Plex Mono', monospace;
@@ -65,7 +62,7 @@ a{color:inherit; text-decoration:none;}
 .stitch{
   border:none;
   height:0;
-  border-top:2.5px dashed rgba(28,24,16,0.22);
+  border-top:2.5px dashed rgba(43,21,49,0.28);
   margin:0;
 }
 .stitch.light{border-top:2.5px dashed rgba(255,255,255,0.25);}
@@ -75,7 +72,7 @@ header{
   position:fixed; top:0; left:0; right:0; z-index:100;
   background:rgba(251,247,244,0.92);
   backdrop-filter:blur(6px);
-  border-bottom:1px solid rgba(28,24,16,0.08);
+  border-bottom:1px solid rgba(43,21,49,0.08);
 }
 .nav{
   display:flex; align-items:center; justify-content:space-between;
@@ -83,18 +80,7 @@ header{
 }
 .logo-mark{display:flex; align-items:center; gap:10px;}
 .logo-mark svg{width:30px; height:30px; flex-shrink:0;}
-.brand-mark{
-  width:32px; height:32px; flex-shrink:0;
-  border-radius:50%; overflow:hidden;
-  border:1.5px solid var(--gold);
-}
-.brand-mark img{width:100%; height:100%; object-fit:cover; display:block;}
-.footer-photo{
-  width:180px; max-width:60%; margin-top:26px;
-  border-radius:4px; overflow:hidden; border:1.5px solid rgba(198,161,91,0.4);
-}
-.footer-photo img{width:100%; display:block;}
-.logo-text{font-family:'Playfair Display',serif; font-size:1.35rem; letter-spacing:0.03em; color:var(--ink);}
+.logo-text{font-family:'Bebas Neue',sans-serif; font-size:1.35rem; letter-spacing:0.03em; color:var(--ink);}
 .logo-text span{color:var(--magenta);}
 .nav-links{display:flex; gap:30px; align-items:center;}
 .nav-links a{
@@ -108,7 +94,7 @@ header{
 }
 .nav-links a:hover::after{width:100%;}
 .nav-cta{
-  background:var(--gold); color:var(--ink) !important; padding:10px 20px;
+  background:var(--magenta); color:#fff !important; padding:10px 20px;
   border-radius:2px; font-weight:700 !important;
 }
 .nav-cta::after{display:none;}
@@ -131,7 +117,7 @@ header{
   padding:60px 56px 60px 32px;
   color:#fff;
 }
-.hero-copy .eyebrow{color:var(--gold-pale);}
+.hero-copy .eyebrow{color:var(--green);}
 .hero-copy h1{
   font-size:clamp(3rem, 6vw, 5.2rem);
   color:#fff;
@@ -149,10 +135,10 @@ header{
   border-radius:2px; letter-spacing:0.02em;
   transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
-.btn-primary{background:var(--gold); color:var(--ink);}
-.btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(150,118,46,0.32);}
-.btn-outline{border:1.5px solid rgba(233,217,180,0.4); color:#fff;}
-.btn-outline:hover{border-color:var(--gold); color:var(--gold-pale); transform:translateY(-2px);}
+.btn-primary{background:var(--magenta); color:#fff;}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(232,24,156,0.35);}
+.btn-outline{border:1.5px solid rgba(255,255,255,0.4); color:#fff;}
+.btn-outline:hover{border-color:var(--green); color:var(--green); transform:translateY(-2px);}
 
 .hero-photo{
   position:relative;
@@ -164,7 +150,7 @@ header{
 }
 .hero-photo::before{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(90deg, var(--plum) 0%, rgba(23,20,15,0) 18%);
+  background:linear-gradient(90deg, var(--plum) 0%, rgba(43,21,49,0) 18%);
   z-index:1;
 }
 .hero-photo .halftone{z-index:2; opacity:0.10;}
@@ -196,7 +182,7 @@ section{position:relative; padding:110px 0;}
   background:var(--paper-dim);
 }
 .quote-card .mark{
-  font-family:'Playfair Display',serif; font-size:3.2rem; color:var(--green); line-height:0.5;
+  font-family:'Bebas Neue',sans-serif; font-size:3.2rem; color:var(--green); line-height:0.5;
   display:block; margin-bottom:14px;
 }
 .quote-card p{
@@ -209,7 +195,7 @@ section{position:relative; padding:110px 0;}
 
 /* services */
 .services{background:var(--ink); color:#fff;}
-.services .eyebrow{color:var(--gold-pale);}
+.services .eyebrow{color:var(--green);}
 .services .section-head h2{color:#fff;}
 .services .section-head p{color:rgba(255,255,255,0.65); margin-top:14px;}
 .svc-grid{
@@ -222,7 +208,7 @@ section{position:relative; padding:110px 0;}
   transition:background 0.25s ease;
 }
 .svc-card:hover{background:var(--plum-soft);}
-.svc-card svg{width:34px; height:34px; margin-bottom:22px; stroke:var(--gold);}
+.svc-card svg{width:34px; height:34px; margin-bottom:22px; stroke:var(--green);}
 .svc-num{
   font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:rgba(255,255,255,0.4);
   margin-bottom:16px; display:block;
@@ -243,73 +229,9 @@ section{position:relative; padding:110px 0;}
   transition:border-color 0.25s ease, transform 0.25s ease;
 }
 .g-item img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s ease;}
-.g-item:hover{border-color:var(--gold); transform:translateY(-4px);}
+.g-item:hover{border-color:var(--green); transform:translateY(-4px);}
 .g-item:hover img{transform:scale(1.08);}
 .g-item.tall{grid-row:span 2; aspect-ratio:auto;}
-
-.portfolio-intro{max-width:720px; margin:0 0 56px; color:var(--ink-soft); font-size:1.05rem;}
-
-.folio-feature{
-  position:relative; border-radius:6px; overflow:hidden;
-  aspect-ratio:21/8; border:1px solid rgba(198,161,91,0.35);
-  margin-bottom:80px;
-}
-.folio-feature img{width:100%; height:100%; object-fit:cover; display:block;}
-.folio-feature::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(0deg, rgba(23,20,15,0.62) 0%, rgba(23,20,15,0) 42%);
-}
-.folio-feature-cap{
-  position:absolute; left:28px; bottom:24px; z-index:2; color:#fff;
-}
-.folio-feature-cap .eyebrow{color:var(--gold-pale);}
-.folio-feature-cap h3{font-size:clamp(1.6rem,3vw,2.4rem); color:#fff; margin-top:6px;}
-
-.folio-group{margin-bottom:88px;}
-.folio-group:last-child{margin-bottom:0;}
-.folio-group-head{
-  display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
-  margin-bottom:28px; padding-bottom:16px;
-  border-bottom:1px solid rgba(198,161,91,0.35);
-}
-.folio-group-head .num{font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--gold-deep); letter-spacing:0.08em;}
-.folio-group-head h3{font-size:2rem; margin-top:6px;}
-.folio-group-head p{color:var(--ink-soft); font-size:0.94rem; max-width:340px; text-align:right;}
-
-.folio-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-.folio-grid.cols-2{grid-template-columns:repeat(2,1fr);}
-.folio-grid.cols-4{grid-template-columns:repeat(4,1fr);}
-.folio-item{
-  position:relative; overflow:hidden; border-radius:5px;
-  aspect-ratio:4/5; border:1px solid rgba(198,161,91,0.25);
-  transition:transform 0.35s ease, box-shadow 0.35s ease;
-}
-.folio-item img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease;}
-.folio-item:hover{transform:translateY(-6px); box-shadow:0 20px 36px rgba(28,24,16,0.18);}
-.folio-item:hover img{transform:scale(1.07);}
-.folio-item .tag{
-  position:absolute; left:14px; bottom:14px; z-index:2;
-  background:rgba(255,255,255,0.94); color:var(--ink);
-  font-family:'IBM Plex Mono',monospace; font-size:0.66rem; letter-spacing:0.06em;
-  text-transform:uppercase; padding:6px 10px; border-radius:2px; border:1px solid var(--gold);
-}
-
-/* process */
-.process{background:var(--paper-dim);}
-.process-grid{
-  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-  background:rgba(28,24,16,0.08); border:1px solid rgba(28,24,16,0.08); margin-top:14px;
-}
-.process-step{background:var(--paper-dim); padding:38px 28px;}
-.process-step .num{font-family:'Playfair Display',serif; font-weight:700; font-size:2.3rem; color:var(--gold); display:block; margin-bottom:16px;}
-.process-step h3{font-size:1.12rem; font-family:'Work Sans',sans-serif; font-weight:700; letter-spacing:0; margin-bottom:8px;}
-.process-step p{font-size:0.88rem; color:var(--ink-soft);}
-
-/* why us */
-.why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px; margin-top:14px;}
-.why-card{padding:30px 0 0; border-top:2px solid var(--gold);}
-.why-card h3{font-size:1.3rem; margin-bottom:10px; font-family:'Playfair Display',serif;}
-.why-card p{color:var(--ink-soft); font-size:0.95rem;}
 
 /* team */
 .team{background:var(--paper-dim);}
@@ -344,8 +266,8 @@ footer{
   display:flex; gap:14px; align-items:flex-start; margin-bottom:16px;
   font-size:0.95rem; color:rgba(255,255,255,0.85);
 }
-.contact-list svg{width:18px; height:18px; flex-shrink:0; margin-top:2px; stroke:var(--gold);}
-.contact-list a:hover{color:var(--gold-pale);}
+.contact-list svg{width:18px; height:18px; flex-shrink:0; margin-top:2px; stroke:var(--green);}
+.contact-list a:hover{color:var(--green);}
 .footer-cta h3{font-size:2.4rem; margin-bottom:18px;}
 .footer-bottom{
   position:relative; z-index:1;
@@ -358,12 +280,12 @@ footer{
 @media (max-width:860px){
   .nav-links{position:fixed; top:68px; left:0; right:0; background:var(--paper);
     flex-direction:column; align-items:flex-start; padding:24px 32px; gap:20px;
-    border-bottom:1px solid rgba(28,24,16,0.1); transform:translateY(-140%); transition:transform 0.3s ease;}
+    border-bottom:1px solid rgba(43,21,49,0.1); transform:translateY(-140%); transition:transform 0.3s ease;}
   .nav-links.open{transform:translateY(0);}
   .menu-btn{display:block;}
   .hero{grid-template-columns:1fr; min-height:auto;}
   .hero-photo{height:60vh; order:-1;}
-  .hero-photo::before{background:linear-gradient(180deg, rgba(23,20,15,0) 60%, var(--plum) 100%);}
+  .hero-photo::before{background:linear-gradient(180deg, rgba(43,21,49,0) 60%, var(--plum) 100%);}
   .hero-copy{padding:44px 24px;}
   .about-grid, .team-grid{grid-template-columns:1fr; gap:34px;}
   .svc-grid{grid-template-columns:repeat(2,1fr);}
@@ -371,14 +293,6 @@ footer{
   .footer-inner{grid-template-columns:1fr;}
   section{padding:70px 0;}
   .wrap{padding:0 22px;}
-
-  .why-grid{grid-template-columns:1fr; gap:26px;}
-  .process-grid{grid-template-columns:repeat(2,1fr);}
-  .folio-feature{aspect-ratio:4/5;}
-  .folio-group-head{flex-direction:column; align-items:flex-start;}
-  .folio-group-head p{text-align:left;}
-  .folio-grid.cols-2, .folio-grid.cols-4{grid-template-columns:repeat(2,1fr);}
-  .folio-grid{grid-template-columns:repeat(2,1fr); gap:14px;}
 }
 </style>
 </head>
@@ -387,7 +301,7 @@ footer{
 <header>
   <nav class="nav">
     <a href="#top" class="logo-mark">
-      <div class="brand-mark"><img src="pic/icon.png" alt="Affinity Mark Enterprise logo"></div>
+      <img src="pic/logo.png" alt="Affinity Mark Enterprise logo" style="width:34px;height:34px;object-fit:contain;">
       <span class="logo-text">Affinity<span>Mark</span></span>
     </a>
     <div class="nav-links" id="navLinks">
@@ -413,8 +327,7 @@ footer{
     </div>
   </div>
   <div class="hero-photo">
-    <img src="pic/icon.png" alt="Affinity Mark Enterprise branded apparel on display">
-    <div class="halftone"></div>
+    <img src="pic/hero.jpg" alt="A selection of branded apparel, including embroidered polo shirts and screen printed t-shirts." loading="lazy"> 
   </div>
 </section>
 
@@ -435,21 +348,6 @@ footer{
         <span class="mark">&ldquo;</span>
         <p>We help businesses create and maintain a strong identity that connects with their audience.</p>
         <div class="attrib">— Affinity Mark Enterprise</div>
-      </div>
-    </div>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <h3>Quality Materials</h3>
-        <p>We work with fabrics and threads chosen to hold their colour and shape wash after wash, so your branding still looks sharp months down the line.</p>
-      </div>
-      <div class="why-card">
-        <h3>In-House Craftsmanship</h3>
-        <p>Embroidery, printing and finishing all happen under one roof in Ruiru, which means tighter quality control from first stitch to final press.</p>
-      </div>
-      <div class="why-card">
-        <h3>Personal, Not Automated</h3>
-        <p>Every order is reviewed by our team before production — proofs, placement and colour checks included, not left to guesswork.</p>
       </div>
     </div>
   </div>
@@ -501,112 +399,26 @@ footer{
   </div>
 </section>
 
-<section class="process">
-  <div class="wrap">
-    <div class="section-head" style="margin-bottom:0;">
-      <span class="eyebrow">How We Work</span>
-      <h2>From first sketch to final stitch</h2>
-    </div>
-    <div class="process-grid">
-      <div class="process-step">
-        <span class="num">01</span>
-        <h3>Consult</h3>
-        <p>Tell us your garment type, quantities, deadline and brand colours — we'll recommend the right technique for the job.</p>
-      </div>
-      <div class="process-step">
-        <span class="num">02</span>
-        <h3>Design &amp; Proof</h3>
-        <p>We digitise your logo or artwork and send a proof for sign-off before anything touches fabric.</p>
-      </div>
-      <div class="process-step">
-        <span class="num">03</span>
-        <h3>Produce</h3>
-        <p>Embroidery, printing or heat transfer, done in-house with quality checks at every stage.</p>
-      </div>
-      <div class="process-step">
-        <span class="num">04</span>
-        <h3>Deliver</h3>
-        <p>Finished garments packed and ready for pickup or delivery, on the timeline we agreed.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="portfolio">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Our Portfolio</span>
       <h2>Work we're proud of</h2>
     </div>
-    <p class="portfolio-intro">From safety-conscious workwear to soft, brand-forward headwear, here's a closer look at the finishes, fabrics and colourways we produce for clients across Ruiru and Nairobi — grouped by the kind of job it was.</p>
-
-    <div class="folio-feature">
-      <img src="pic/p2.jpeg" alt="Affinity Mark Enterprise branded puffer jacket with embroidered logo, front and back views">
-      <div class="folio-feature-cap">
-        <span class="eyebrow">Featured Job</span>
-        <h3>Embroidered puffer jackets, front &amp; back branding</h3>
-      </div>
+        <div class="gallery">
+       <div class="g-item"><img src="pic/p10.png" alt="Branded safety helmets in multiple colours"></div>     
+      <div class="g-item"><img src="pic/p2.jpeg" alt="Affinity Mark Enterprise branded puffer jacket with embroidered logo, front and back views"></div>
+      <div class="g-item"><img src="pic/p3.jpeg" alt="Range of custom polo shirt colour options available for branding"></div>
+      <div class="g-item"><img src="pic/p4.jpeg" alt="Range of custom hoodie colour options available for branding"></div>
+      <div class="g-item"><img src="pic/p5.jpeg" alt="Range of custom polo shirt colour options available for branding"></div>
+      <div class="g-item"><img src="pic/p6.png" alt="Embroidered caps for yeTu Plus Premium Maize Meal"></div>
+      <div class="g-item"><img src="pic/p7.png" alt="Embroidered caps for yeTu Plus Premium Maize Meal"></div>
+      <div class="g-item"><img src="pic/p8.png" alt="Range of custom hoodie colour options available for branding"></div>
+      <div class="g-item"><img src="pic/p9.png" alt="Printed tote bag for Kenagro, partnering with farmers"></div>
+      <div class="g-item"><img src="pic/p11.jpeg" alt="Embroidered caps for Afya Hodari Animal Feeds in white and navy"></div>
+      <div class="g-item"><img src="pic/p12.jpeg" alt="Safety work boot"></div>
+      
     </div>
-
-    <div class="folio-group">
-      <div class="folio-group-head">
-        <div>
-          <span class="num">01 / Outerwear &amp; Protective Wear</span>
-          <h3>Built for the site and the street</h3>
-        </div>
-        <p>Safety-first construction with clean, embroidered branding that still looks sharp off-site.</p>
-      </div>
-      <div class="folio-grid cols-2">
-        <div class="folio-item"><img src="pic/p10.png" alt="Branded safety helmets in multiple colours"><span class="tag">Safety Helmets</span></div>
-        <div class="folio-item"><img src="pic/p2.jpeg" alt="Affinity Mark Enterprise branded puffer jacket with embroidered logo, front and back views"><span class="tag">Puffer Jackets</span></div>
-      </div>
-    </div>
-
-    <div class="folio-group">
-      <div class="folio-group-head">
-        <div>
-          <span class="num">02 / Custom Colourways</span>
-          <h3>Polos &amp; hoodies, your palette</h3>
-        </div>
-        <p>Every colourway available for polo shirts and hoodies, matched to your brand guidelines.</p>
-      </div>
-      <div class="folio-grid cols-4">
-        <div class="folio-item"><img src="pic/p3.jpeg" alt="Range of custom polo shirt colour options available for branding"><span class="tag">Polo Shirts</span></div>
-        <div class="folio-item"><img src="pic/p5.jpeg" alt="Range of custom polo shirt colour options available for branding"><span class="tag">Polo Shirts</span></div>
-        <div class="folio-item"><img src="pic/p4.jpeg" alt="Range of custom hoodie colour options available for branding"><span class="tag">Hoodies</span></div>
-        <div class="folio-item"><img src="pic/p8.png" alt="Range of custom hoodie colour options available for branding"><span class="tag">Hoodies</span></div>
-      </div>
-    </div>
-
-    <div class="folio-group">
-      <div class="folio-group-head">
-        <div>
-          <span class="num">03 / Embroidered Headwear</span>
-          <h3>Caps that carry the logo well</h3>
-        </div>
-        <p>Structured caps, tightly stitched — shown here for yeTu Plus Premium Maize Meal.</p>
-      </div>
-      <div class="folio-grid cols-2">
-        <div class="folio-item"><img src="pic/p6.png" alt="Embroidered caps for yeTu Plus Premium Maize Meal"><span class="tag">yeTu Plus Caps</span></div>
-        <div class="folio-item"><img src="pic/p7.png" alt="Embroidered caps for yeTu Plus Premium Maize Meal"><span class="tag">yeTu Plus Caps</span></div>
-      </div>
-    </div>
-
-    <div class="folio-group">
-      <div class="folio-group-head">
-        <div>
-          <span class="num">04 / Branded Accessories</span>
-          <h3>Beyond apparel</h3>
-        </div>
-        <p>Printed totes and soft goods for partners who want their brand carried, literally.</p>
-      </div>
-      <div class="folio-feature" style="margin-bottom:0; aspect-ratio:21/9;">
-        <img src="pic/p9.png" alt="Printed tote bag for Kenagro, partnering with farmers">
-        <div class="folio-feature-cap">
-          <span class="eyebrow">Client: Kenagro</span>
-          <h3>Printed tote bags, partnering with farmers</h3>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -617,7 +429,7 @@ footer{
   <div class="wrap">
     <div class="team-grid">
       <div class="team-photo">
-        <img src="pic/team.jpeg" alt="The Affinity Mark Enterprise production team">
+        <img src="pic/team.jpeg" alt="Group of professionals, tradespeople, students and healthcare workers wearing Luxe branded uniforms produced by Affinity Mark Enterprise">
       </div>
       <div class="team-copy">
         <span class="eyebrow">Our Team</span>
@@ -637,17 +449,16 @@ footer{
   <div class="halftone on-dark"></div>
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="eyebrow" style="color:var(--gold-pale);">Get In Touch</span>
-      <h3 style="font-size:2.6rem; margin:12px 0 6px; font-family:'Playfair Display',serif;">Let's brand your team.</h3>
+      <span class="eyebrow" style="color:var(--green);">Get In Touch</span>
+      <h3 style="font-size:2.6rem; margin:12px 0 6px; font-family:'Bebas Neue',sans-serif;">Let's brand your team.</h3>
       <p>Tell us about your garments, your quantities and your deadline — we'll get back to you with a quote.</p>
       <div class="logo-mark" style="margin-top:30px;">
-        <div class="brand-mark"><img src="pic/icon.png" alt="Affinity Mark Enterprise logo"></div>
+        <img src="pic/logo.png" alt="Affinity Mark Enterprise logo" style="width:40px;height:40px;object-fit:contain;background:#fff;border-radius:50%;padding:4px;">
         <span class="logo-text">Affinity<span>Mark</span> Enterprise</span>
       </div>
-      <div class="footer-photo"><img src="pic/teller.png" alt="Affinity Mark Enterprise team member at the shop counter"></div>
     </div>
     <div>
-      <span class="eyebrow" style="color:var(--gold-pale);">Contact</span>
+      <span class="eyebrow" style="color:var(--green);">Contact</span>
       <div class="contact-list" style="margin-top:20px;">
         <a href="tel:+254740150221">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.2a2 2 0 0 1 2.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0 1 22 16.92Z"/></svg>
@@ -684,4 +495,4 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 </script>
 
 </body>
-</html>
+</html>[]
